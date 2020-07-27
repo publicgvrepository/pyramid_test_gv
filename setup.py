@@ -3,12 +3,13 @@ import os
 from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.txt')) as f:
+with open(os.path.join(here, 'README.md')) as f:
     README = f.read()
 with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
+    'db-psycopg2',
     'plaster_pastedeploy',
     'pyramid',
     'pyramid_jinja2',
@@ -21,7 +22,7 @@ requires = [
     'SQLAlchemy',
     'transaction',
     'zope.sqlalchemy',
-    'db-psycopg2'
+
 ]
 
 tests_require = [

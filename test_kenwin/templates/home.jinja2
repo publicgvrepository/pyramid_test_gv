@@ -36,11 +36,26 @@
     <header class="jumbotron my-4">
       <h1 class="display-3">Welcome {{request.user.name}}!</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-      <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+      <a href="#" class="btn btn-primary btn-lg" onclick="myFunction()">{{button_text}}</a>
     </header>
        <!-- Page Features -->
     <div class="row text-center">
-
+     <p id="texto"></p>
     </div>
 </div>
 {% endblock content %}
+
+{% block script %}
+<script>
+function myFunction() {
+  var paragraph = document.getElementById("texto");
+  $.ajax({
+    url:'{{request.static_url('test_kenwin:static/text.txt')}}',
+    success: function (data){
+      var text = document.createTextNode(data);
+      paragraph.appendChild(text);
+    }
+  });
+}
+</script>
+{% endblock %}

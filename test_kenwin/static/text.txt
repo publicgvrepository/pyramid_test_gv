@@ -1,0 +1,1 @@
+Para poder ver las consideraciones ir a pyramid_test_gv/doc/readme.txt. Este texto es traido del servidor con ajax y es el archivo static/text.txt

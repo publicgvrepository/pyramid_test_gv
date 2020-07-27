@@ -1,6 +1,5 @@
 # Test Pyramid
 
-
 Este es el desarrollo de un test técnico para Pyramid web Framework
 
 
@@ -19,26 +18,27 @@ El escenario ideal implica levantar una aplicación web local en Pyramid con una
  - build-essentials, libsqlite3-dev
  - psycopg2 (pip)
 
+
 ## Instrucciones:
 
  - virtualenv -p python3 venv_test_kenwin
  - source venv_test_kenwin/bin/activate
- - git clone git@github.com:publicgvrepository/pyramid_test_gv.git
- - cd
+ - clonar este repositorio en un directorio
+ - cd pyramid_test_gv
 
-- DB:
-  - crear *test_kenwin* database on postgresql como postgres
+ - crear *test_kenwin* database en postgresql como postgres
 
-  - a:
-     - alembic -c development.ini upgrade head
-     - alembic -c development.ini revision --autogenerate -m "use new model User"
-     - initialize_test_kenwin_db development.ini
+ - python setup.py develop **(dos veces si falla por bug)**
 
-  - b:
-     - psql -U postgres -W  test_kenwin < database/test_kenwin_gv.sql
+ - sigue **a** o **b**:
+   - a (migra datos):
+      - alembic -c development.ini upgrade head
+      - alembic -c development.ini revision --autogenerate -m "use new model User"
+      - initialize_test_kenwin_db development.ini
 
-- python setup.py develop
+   - b (importa datos):
+     - psql -U postgres -W test_kenwin < database/test_kenwin_gv.sql
 
 - pserve development.ini
 
-- open your favourite browser on http://localhost:6543
+- abrir browser favorito en http://localhost:6543
