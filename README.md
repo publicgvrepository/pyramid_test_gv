@@ -15,7 +15,7 @@ El escenario ideal implica levantar una aplicación web local en Pyramid con una
 
 **Herramientas y librerias**:
  - virtualenv
- - build-essentials, libsqlite3-dev
+ - build-essentials, libpq-dev
  - psycopg2 (pip)
 
 
