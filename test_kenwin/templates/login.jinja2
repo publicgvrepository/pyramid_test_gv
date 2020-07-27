@@ -1,0 +1,29 @@
+{% extends 'layout.jinja2' %}
+
+
+{% block title %}Login - {% endblock title %}
+
+{% block head %}
+  {{ super() }}
+  <link href="{{request.static_url('test_kenwin:static/theme-login.css')}}" rel="stylesheet">
+{% endblock head %}
+
+{% block content %}
+<div class="login-page">
+ <p>
+<strong>
+    Login to Pyramid test app
+</strong><br>
+
+</p>
+  <div class="form" >
+    <form class="login-form" action="{{ url }}" method="post">
+      <input type="hidden" name="next" value="{{ next_url }}">
+      <input type="text" placeholder="username" name="login" value="{{ login }}"/>
+      <input type="password" name="password" placeholder="password"/>
+      <button type="submit" name="form.submitted" value="Log In">login</button>
+      <p class="message">{{ message }} </p>
+    </form>
+  </div>
+</div>
+{% endblock content %}
