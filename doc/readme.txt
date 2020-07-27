@@ -3,9 +3,9 @@
         * https://docs.pylonsproject.org/projects/pyramid/en/latest/tutorials/wiki2/index.html
     El resto es deducción y googleo.
 
-La descripción de lo realizado es mas o menos el siguiente:
+La descripción de lo realizado es mas o menos como sigue:
 
-Con ellos setié el proyecto para que trabaje con el template jinja2 (que lo conoczco de django y flask),
+Siguiendo los tutoriales, setié el proyecto para que trabaje con el template jinja2 (que lo conoczco de django y flask),
 setié el ORM sqlAlchemy y modifiqué para que se conecte a la base postgresql test_kenwin en localhost.
     Para que el proyecto funcione con esto, en setup.py agregué los modulos db-psycopg2 y
 alembic (para trabajar con migraciones iniciales)
