@@ -28,6 +28,8 @@ El escenario ideal implica levantar una aplicación web local en Pyramid con una
 
  - crear *test_kenwin* database en postgresql como postgres
 
+ - setear su password en development.ini, linea 18 ==> {DBPassword}
+
  - python setup.py develop **(dos veces si falla por bug)**
 
  - sigue **a** o **b**:
